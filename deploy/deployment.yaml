@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: connect-demo-website
+spec:
+  selector:
+    matchLabels:
+      app: connect-demo-website
+  template:
+    metadata:
+      labels:
+        app: connect-demo-website
+    spec:
+      containers:
+      - name: connect-demo-website
+        image: to-be-replaced:latest
+        ports:
+        - containerPort: 80

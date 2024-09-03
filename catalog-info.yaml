@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: connect-demo-website
+  description: Connect Demo Website
+  annotations:
+    backstage.io/kubernetes-id: connect-demo-website
+    backstage.io/kubernetes-namespace: workloads
+    backstage.io/kubernetes-cluster: connect-demo-cluster
+    github.com/project-slug: nicpym/connect-demo-website
+    argocd/app-name: connect-demo-website
+    argocd/app-namespace: connect-demo-cluster
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - react
+  links:
+    - url: http://connect-demo-website.connect-demo-cluster.localhost
+      title: Website
+      icon: web
+spec:
+  type: website
+  lifecycle: experimental
+  owner: group:default/team-a
+  system: connect-demo
+  dependsOn:
+    - resource:default/connect-demo-cluster

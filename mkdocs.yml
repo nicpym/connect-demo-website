@@ -1,0 +1,8 @@
+site_name: connect-demo-website
+site_description: Connect Demo Website
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
